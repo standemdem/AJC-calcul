@@ -1,5 +1,5 @@
 #include "operations.h"
 
 int addition(int a, int b){
-    return (a + b);
+    return (a +b);
 }
