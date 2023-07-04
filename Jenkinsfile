@@ -38,7 +38,6 @@ pipeline {
             steps {
                 echo 'Deploying...'
                 sh 'docker run exomake'
-                // sh 'make deploy'
             }
         }
         stage('Greet') {
