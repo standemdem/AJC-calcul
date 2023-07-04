@@ -2,7 +2,7 @@
 CC = gcc
 FLAGS = -Wall -Wextra -Werror
 FILES = addition.c soustraction.c multiplication.c division.c
-TARGET = exoMake
+TARGET = exomake
 
 #Règles
 build: main.c ${FILES}

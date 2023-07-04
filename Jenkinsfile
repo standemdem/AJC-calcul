@@ -30,14 +30,14 @@ pipeline {
         }
         stage('build_image') {
             steps {
-                sh 'docker build -t exoMake .'
+                sh 'docker build -t exomake .'
                 sh 'docker images'
             }
         }
         stage('deploy') {
             steps {
                 echo 'Deploying...'
-                sh 'docker run exoMake'
+                sh 'docker run exomake'
                 // sh 'make deploy'
             }
         }
