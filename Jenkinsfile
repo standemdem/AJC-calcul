@@ -30,7 +30,7 @@ pipeline {
         }
         stage('build_image') {
             steps {
-                sh 'docker build -t exoMake'
+                sh 'docker build -t exoMake .'
                 sh 'docker images'
             }
         }
