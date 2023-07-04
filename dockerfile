@@ -1,5 +1,5 @@
 FROM gcc
-COPY . /app
+RUN git clone "https://github.com/standemdem/AJC-calcul"
 WORKDIR /app
-RUN gcc -o ajc-calcul main.c
+RUN make deploy
 CMD ["./ajc-calcul"]

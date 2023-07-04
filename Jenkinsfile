@@ -28,10 +28,17 @@ pipeline {
                 echo 'testing program...'
             }
         }
+        stage('build_image') {
+            steps {
+                sh 'docker build -t exoMake'
+                sh 'docker images'
+            }
+        }
         stage('deploy') {
             steps {
-                sh 'make deploy'
                 echo 'Deploying...'
+                sh 'docker run exoMake'
+                // sh 'make deploy'
             }
         }
         stage('Greet') {
